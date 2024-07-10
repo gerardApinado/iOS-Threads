@@ -14,6 +14,12 @@
 		D558EBF72C3E656A00DC62A6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EBF62C3E656A00DC62A6 /* LoginView.swift */; };
 		D558EBF92C3E6C2A00DC62A6 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EBF82C3E6C2A00DC62A6 /* RegistrationView.swift */; };
 		D558EBFC2C3E6DD800DC62A6 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EBFB2C3E6DD800DC62A6 /* TextFieldModifier.swift */; };
+		D558EBFF2C3E6FAE00DC62A6 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EBFE2C3E6FAE00DC62A6 /* AppTabView.swift */; };
+		D558EC032C3E738800DC62A6 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EC022C3E738800DC62A6 /* FeedView.swift */; };
+		D558EC072C3E73D600DC62A6 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EC062C3E73D600DC62A6 /* ExploreView.swift */; };
+		D558EC0F2C3E748A00DC62A6 /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EC0E2C3E748A00DC62A6 /* CreateThreadView.swift */; };
+		D558EC112C3E749B00DC62A6 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EC102C3E749B00DC62A6 /* ActivityView.swift */; };
+		D558EC132C3E74A800DC62A6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EC122C3E74A800DC62A6 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		D558EBF62C3E656A00DC62A6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D558EBF82C3E6C2A00DC62A6 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		D558EBFB2C3E6DD800DC62A6 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		D558EBFE2C3E6FAE00DC62A6 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		D558EC022C3E738800DC62A6 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		D558EC062C3E73D600DC62A6 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		D558EC0E2C3E748A00DC62A6 /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
+		D558EC102C3E749B00DC62A6 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		D558EC122C3E74A800DC62A6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +92,14 @@
 		D558EBEE2C3E64ED00DC62A6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D558EBF52C3E655100DC62A6 /* Root */,
+				D558EC092C3E744D00DC62A6 /* Activity */,
 				D558EBF32C3E653500DC62A6 /* Auth */,
+				D558EC042C3E73BF00DC62A6 /* Explore */,
+				D558EC002C3E735F00DC62A6 /* Feed */,
+				D558EC0A2C3E745700DC62A6 /* Profile */,
+				D558EBFD2C3E6F9800DC62A6 /* Tabbar */,
+				D558EC082C3E73FD00DC62A6 /* ThreadCreation */,
+				D558EBF52C3E655100DC62A6 /* Root */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -118,18 +136,18 @@
 		D558EBF32C3E653500DC62A6 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				D558EBF42C3E653D00DC62A6 /* Views */,
+				D558EBF42C3E653D00DC62A6 /* View */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		D558EBF42C3E653D00DC62A6 /* Views */ = {
+		D558EBF42C3E653D00DC62A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D558EBF62C3E656A00DC62A6 /* LoginView.swift */,
 				D558EBF82C3E6C2A00DC62A6 /* RegistrationView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		D558EBF52C3E655100DC62A6 /* Root */ = {
@@ -146,6 +164,94 @@
 				D558EBFB2C3E6DD800DC62A6 /* TextFieldModifier.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D558EBFD2C3E6F9800DC62A6 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				D558EBFE2C3E6FAE00DC62A6 /* AppTabView.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		D558EC002C3E735F00DC62A6 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				D558EC012C3E736B00DC62A6 /* View */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		D558EC012C3E736B00DC62A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D558EC022C3E738800DC62A6 /* FeedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D558EC042C3E73BF00DC62A6 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				D558EC052C3E73C600DC62A6 /* View */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		D558EC052C3E73C600DC62A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D558EC062C3E73D600DC62A6 /* ExploreView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D558EC082C3E73FD00DC62A6 /* ThreadCreation */ = {
+			isa = PBXGroup;
+			children = (
+				D558EC0B2C3E746300DC62A6 /* View */,
+			);
+			path = ThreadCreation;
+			sourceTree = "<group>";
+		};
+		D558EC092C3E744D00DC62A6 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				D558EC0C2C3E746800DC62A6 /* View */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		D558EC0A2C3E745700DC62A6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D558EC0D2C3E746C00DC62A6 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D558EC0B2C3E746300DC62A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D558EC0E2C3E748A00DC62A6 /* CreateThreadView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D558EC0C2C3E746800DC62A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D558EC102C3E749B00DC62A6 /* ActivityView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D558EC0D2C3E746C00DC62A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D558EC122C3E74A800DC62A6 /* ProfileView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,10 +324,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D558EC032C3E738800DC62A6 /* FeedView.swift in Sources */,
 				D558EBF72C3E656A00DC62A6 /* LoginView.swift in Sources */,
 				D558EBFC2C3E6DD800DC62A6 /* TextFieldModifier.swift in Sources */,
+				D558EC112C3E749B00DC62A6 /* ActivityView.swift in Sources */,
+				D558EC0F2C3E748A00DC62A6 /* CreateThreadView.swift in Sources */,
 				D558EBE32C3E64B800DC62A6 /* ContentView.swift in Sources */,
 				D558EBE12C3E64B800DC62A6 /* Threads_iOSCloneApp.swift in Sources */,
+				D558EBFF2C3E6FAE00DC62A6 /* AppTabView.swift in Sources */,
+				D558EC072C3E73D600DC62A6 /* ExploreView.swift in Sources */,
+				D558EC132C3E74A800DC62A6 /* ProfileView.swift in Sources */,
 				D558EBF92C3E6C2A00DC62A6 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

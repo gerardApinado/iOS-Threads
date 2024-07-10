@@ -13,7 +13,7 @@ struct UserCell: View {
             CircleProfileImageView()
             
             VStack(alignment: .leading){
-                Text("@loiverever")
+                Text("@loiverever♡")
                     .fontWeight(.semibold)
                 Text("Bini Maloi")
             }

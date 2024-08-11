@@ -25,6 +25,8 @@
 		D558EC182C3E878700DC62A6 /* CircleProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EC172C3E878700DC62A6 /* CircleProfileImageView.swift */; };
 		D558EC1A2C3E883B00DC62A6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EC192C3E883B00DC62A6 /* UserCell.swift */; };
 		D558EC1D2C3E8C2300DC62A6 /* ProfileThreadFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558EC1C2C3E8C2300DC62A6 /* ProfileThreadFilter.swift */; };
+		D56DF3E32C68A4EC002521E1 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DF3E22C68A4EC002521E1 /* ContentViewModel.swift */; };
+		D56DF3E52C68A967002521E1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DF3E42C68A967002521E1 /* LoginViewModel.swift */; };
 		D5CD2B1F2C56247100A000E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5CD2B1E2C56247100A000E6 /* GoogleService-Info.plist */; };
 		D5CD2B222C56251D00A000E6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5CD2B212C56251D00A000E6 /* FirebaseAnalytics */; };
 		D5CD2B242C56251D00A000E6 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5CD2B232C56251D00A000E6 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -78,6 +80,8 @@
 		D558EC172C3E878700DC62A6 /* CircleProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProfileImageView.swift; sourceTree = "<group>"; };
 		D558EC192C3E883B00DC62A6 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		D558EC1C2C3E8C2300DC62A6 /* ProfileThreadFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileThreadFilter.swift; sourceTree = "<group>"; };
+		D56DF3E22C68A4EC002521E1 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		D56DF3E42C68A967002521E1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D5CD2B1E2C56247100A000E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5CD2B5B2C5628ED00A000E6 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		D5CD2B5D2C5629FC00A000E6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				D558EBE22C3E64B800DC62A6 /* ContentView.swift */,
+				D56DF3E22C68A4EC002521E1 /* ContentViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				D5CD2B5B2C5628ED00A000E6 /* RegistrationViewModel.swift */,
+				D56DF3E42C68A967002521E1 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -486,10 +492,12 @@
 				D558EBFC2C3E6DD800DC62A6 /* TextFieldModifier.swift in Sources */,
 				D558EC182C3E878700DC62A6 /* CircleProfileImageView.swift in Sources */,
 				D558EC152C3E767800DC62A6 /* ThreadCell.swift in Sources */,
+				D56DF3E52C68A967002521E1 /* LoginViewModel.swift in Sources */,
 				D558EC112C3E749B00DC62A6 /* ActivityView.swift in Sources */,
 				D558EC1A2C3E883B00DC62A6 /* UserCell.swift in Sources */,
 				D558EC0F2C3E748A00DC62A6 /* CreateThreadView.swift in Sources */,
 				D558EC1D2C3E8C2300DC62A6 /* ProfileThreadFilter.swift in Sources */,
+				D56DF3E32C68A4EC002521E1 /* ContentViewModel.swift in Sources */,
 				D558EBE32C3E64B800DC62A6 /* ContentView.swift in Sources */,
 				D558EBE12C3E64B800DC62A6 /* Threads_iOSCloneApp.swift in Sources */,
 				D558EBFF2C3E6FAE00DC62A6 /* AppTabView.swift in Sources */,

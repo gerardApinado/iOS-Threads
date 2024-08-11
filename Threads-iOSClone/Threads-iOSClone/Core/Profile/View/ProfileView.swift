@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    @State private var selectedFilter: ProfileThreadFilter = .threads
+    @StateObject var viewModel = ProfileViewModel()
     @Namespace var animation
     
     private var filterBarWidth: CGFloat {
@@ -65,9 +65,9 @@ struct ProfileView: View {
                             VStack {
                                 Text(filter.title)
                                     .font(.subheadline)
-                                    .fontWeight(selectedFilter == filter ? .semibold : .regular)
+                                    .fontWeight(viewModel.selectedFilter == filter ? .semibold : .regular)
                                 
-                                if selectedFilter == filter {
+                                if viewModel.selectedFilter == filter {
                                     Rectangle()
                                         .foregroundStyle(.black)
                                         .frame(width: filterBarWidth, height: 1)
@@ -80,7 +80,7 @@ struct ProfileView: View {
                             }
                             .onTapGesture {
                                 withAnimation(.spring()){
-                                    selectedFilter = filter
+                                    viewModel.selectedFilter = filter
                                 }
                             }
                         }

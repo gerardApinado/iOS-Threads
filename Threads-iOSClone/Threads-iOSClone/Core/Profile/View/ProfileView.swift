@@ -10,6 +10,10 @@ import SwiftUI
 struct ProfileView: View {
     
     @StateObject var viewModel = ProfileViewModel()
+    private var currentUser: User? {
+        return viewModel.currentUser
+    }
+    
     @Namespace var animation
     
     private var filterBarWidth: CGFloat {
@@ -24,11 +28,11 @@ struct ProfileView: View {
                     /// name ang profile
                     HStack(alignment: .top) {
                         VStack(alignment: .leading, spacing: 4) {
-                            Text("Mary Loi Yves Ricalde")
+                            Text(currentUser?.fullname ?? "")
                                 .font(.title2)
                                 .fontWeight(.semibold)
                             
-                            Text("@loiverever♡")
+                            Text("@\(currentUser?.username ?? "")")
                                 .font(.subheadline)
                         }
                         
@@ -37,8 +41,10 @@ struct ProfileView: View {
                         CircleProfileImageView()
                     }
                     
-                    Text("Bini Member; Main Vocal")
-                        .font(.subheadline)
+                    if let bio = currentUser?.bio {
+                        Text(bio)
+                            .font(.subheadline)
+                    }
                     
                     Text("1.5m followers")
                         .font(.caption)

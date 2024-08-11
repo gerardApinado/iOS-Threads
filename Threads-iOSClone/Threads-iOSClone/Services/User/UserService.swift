@@ -27,4 +27,8 @@ final class UserService {
         
         print("DEBUG: User is \(user)")
     }
+    
+    func reset(){
+        currentUser = nil
+    }
 }

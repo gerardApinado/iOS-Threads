@@ -30,6 +30,8 @@
 		D56DF3E72C68ADC0002521E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DF3E62C68ADC0002521E1 /* User.swift */; };
 		D56DF3EA2C68B187002521E1 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DF3E92C68B187002521E1 /* UserService.swift */; };
 		D56DF3ED2C68B455002521E1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DF3EC2C68B455002521E1 /* ProfileViewModel.swift */; };
+		D56DF3F02C68BF42002521E1 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DF3EF2C68BF42002521E1 /* ExploreViewModel.swift */; };
+		D56DF3F22C68C26B002521E1 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DF3F12C68C26B002521E1 /* PreviewProvider.swift */; };
 		D5CD2B1F2C56247100A000E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5CD2B1E2C56247100A000E6 /* GoogleService-Info.plist */; };
 		D5CD2B222C56251D00A000E6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5CD2B212C56251D00A000E6 /* FirebaseAnalytics */; };
 		D5CD2B242C56251D00A000E6 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5CD2B232C56251D00A000E6 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -88,6 +90,8 @@
 		D56DF3E62C68ADC0002521E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D56DF3E92C68B187002521E1 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D56DF3EC2C68B455002521E1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D56DF3EF2C68BF42002521E1 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		D56DF3F12C68C26B002521E1 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		D5CD2B1E2C56247100A000E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5CD2B5B2C5628ED00A000E6 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		D5CD2B5D2C5629FC00A000E6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 		D558EBF02C3E64F900DC62A6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D56DF3F12C68C26B002521E1 /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 		D558EC042C3E73BF00DC62A6 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				D56DF3EE2C68BF36002521E1 /* ViewModel */,
 				D558EC052C3E73C600DC62A6 /* View */,
 			);
 			path = Explore;
@@ -384,6 +390,14 @@
 			isa = PBXGroup;
 			children = (
 				D56DF3EC2C68B455002521E1 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D56DF3EE2C68BF36002521E1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D56DF3EF2C68BF42002521E1 /* ExploreViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -513,6 +527,7 @@
 				D5CD2B5C2C5628ED00A000E6 /* RegistrationViewModel.swift in Sources */,
 				D558EBF72C3E656A00DC62A6 /* LoginView.swift in Sources */,
 				D5CD2B5E2C5629FC00A000E6 /* AuthService.swift in Sources */,
+				D56DF3F22C68C26B002521E1 /* PreviewProvider.swift in Sources */,
 				D527BF1D2C46383100E05BE2 /* EditProfileView.swift in Sources */,
 				D558EBFC2C3E6DD800DC62A6 /* TextFieldModifier.swift in Sources */,
 				D56DF3EA2C68B187002521E1 /* UserService.swift in Sources */,
@@ -521,6 +536,7 @@
 				D56DF3E52C68A967002521E1 /* LoginViewModel.swift in Sources */,
 				D558EC112C3E749B00DC62A6 /* ActivityView.swift in Sources */,
 				D558EC1A2C3E883B00DC62A6 /* UserCell.swift in Sources */,
+				D56DF3F02C68BF42002521E1 /* ExploreViewModel.swift in Sources */,
 				D558EC0F2C3E748A00DC62A6 /* CreateThreadView.swift in Sources */,
 				D558EC1D2C3E8C2300DC62A6 /* ProfileThreadFilter.swift in Sources */,
 				D56DF3E32C68A4EC002521E1 /* ContentViewModel.swift in Sources */,

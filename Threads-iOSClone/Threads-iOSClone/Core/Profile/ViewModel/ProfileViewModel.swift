@@ -10,7 +10,7 @@ import Combine
 
 class ProfileViewModel: ObservableObject {
     
-    @Published var currentUser: User?
+    @Published var user: User?
     @Published var selectedFilter: ProfileThreadFilter = .threads
     
     private var cancellable = Set<AnyCancellable>()
@@ -20,9 +20,13 @@ class ProfileViewModel: ObservableObject {
     }
     
     private func setupSubsribers() {
-        UserService.shared.$currentUser.sink { [weak self] currentUser in
-            self?.currentUser = currentUser
+        UserService.shared.$currentUser.sink { [weak self] user in
+            self?.user = user
         }.store(in: &cancellable)
+    }
+    
+    func setUser(_ user: User) {
+        self.user = user
     }
     
 }

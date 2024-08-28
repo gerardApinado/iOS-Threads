@@ -14,6 +14,8 @@ struct CurrentUserProfileView: View {
     private var currentUser: User? {
         return viewModel.user
     }
+    
+    @State var isShowEditProfile: Bool = false
         
     var body: some View {
         NavigationStack {
@@ -23,7 +25,7 @@ struct CurrentUserProfileView: View {
                 
                 HStack {
                     Button {
-                        
+                        isShowEditProfile = true
                     } label: {
                         Text("Edit Profile")
                             .font(.subheadline)
@@ -57,6 +59,13 @@ struct CurrentUserProfileView: View {
                 
                 UserContentListView(viewModel: viewModel)
             }
+            .sheet(isPresented: $isShowEditProfile,
+            onDismiss: {
+                isShowEditProfile = false
+            }, content: {
+                EditProfileView()
+                    .environmentObject(viewModel)
+            })
             .padding(.horizontal)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

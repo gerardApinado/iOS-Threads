@@ -21,7 +21,7 @@ struct CurrentUserProfileView: View {
                 
                 ProfileHeaderView(user: currentUser)
                 
-                HStack{
+                HStack {
                     Button {
                         
                     } label: {
@@ -29,7 +29,23 @@ struct CurrentUserProfileView: View {
                             .font(.subheadline)
                             .fontWeight(.semibold)
                             .foregroundColor(.black)
-                            .frame(width: 352, height: 32)
+                            .frame(width: 352/2, height: 32)
+                            .background(.white)
+                            .cornerRadius(8)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color(.systemGray4), lineWidth: 1)
+                            }
+                    }
+                    
+                    Button {
+                        
+                    } label: {
+                        Text("Share Profile")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.black)
+                            .frame(width: 352/2, height: 32)
                             .background(.white)
                             .cornerRadius(8)
                             .overlay {

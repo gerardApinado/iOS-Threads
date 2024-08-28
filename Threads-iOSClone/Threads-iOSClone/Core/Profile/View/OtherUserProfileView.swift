@@ -26,9 +26,25 @@ struct OtherUserProfileView: View {
                         .font(.subheadline)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
-                        .frame(width: 352, height: 32)
+                        .frame(width: 352/2, height: 32)
                         .background(Color(.black))
                         .cornerRadius(8)
+                }
+                
+                Button {
+                    
+                } label: {
+                    Text("Mention")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.black)
+                        .frame(width: 352/2, height: 32)
+                        .background(.white)
+                        .cornerRadius(8)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color(.systemGray4), lineWidth: 1)
+                        }
                 }
             }
             
@@ -37,11 +53,19 @@ struct OtherUserProfileView: View {
         .padding(.horizontal)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    print("DEBUG: Other User Toolbar")
-                } label: {
-                    Image(systemName: "ellipsis.circle")
-                        .foregroundStyle(.black)
+                HStack(spacing: 5) {
+                    Button {
+                        print("DEBUG: Other User Toolbar")
+                    } label: {
+                        Image(systemName: "bell")
+                            .foregroundStyle(.black)
+                    }
+                    Button {
+                        print("DEBUG: Other User Toolbar")
+                    } label: {
+                        Image(systemName: "ellipsis.circle")
+                            .foregroundStyle(.black)
+                    }
                 }
             }
         }

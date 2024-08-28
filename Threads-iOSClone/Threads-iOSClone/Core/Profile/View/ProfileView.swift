@@ -28,13 +28,16 @@ struct ProfileView: View {
     }
     
     var body: some View {
-        if viewType == .currentUser {
-            CurrentUserProfileView(viewModel: viewModel)
-        } else {
-            if let user = user {
-                OtherUserProfileView(viewModel: viewModel, user: user)
+        Group {
+            if viewType == .currentUser {
+                CurrentUserProfileView(viewModel: viewModel)
+            } else {
+                if let user = user {
+                    OtherUserProfileView(viewModel: viewModel, user: user)
+                }
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

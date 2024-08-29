@@ -11,7 +11,7 @@ struct OtherUserProfileView: View {
     
     @StateObject var viewModel : ProfileViewModel
     
-    var user : User?
+    var user : User
         
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -48,7 +48,7 @@ struct OtherUserProfileView: View {
                 }
             }
             
-            UserContentListView(viewModel: viewModel)
+            UserContentListView(user: user)
         }
         .padding(.horizontal)
         .toolbar {

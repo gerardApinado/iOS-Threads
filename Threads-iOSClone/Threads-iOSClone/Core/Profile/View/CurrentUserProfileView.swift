@@ -56,8 +56,9 @@ struct CurrentUserProfileView: View {
                             }
                     }
                 }
-                
-                UserContentListView(viewModel: viewModel)
+                if let user = currentUser {
+                    UserContentListView(user: user)
+                }
             }
             .sheet(isPresented: $isShowEditProfile,
             onDismiss: {

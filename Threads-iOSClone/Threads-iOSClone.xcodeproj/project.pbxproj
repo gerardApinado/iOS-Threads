@@ -35,6 +35,8 @@
 		D559EC3A2C801F320058302A /* CreateThreadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D559EC392C801F320058302A /* CreateThreadViewModel.swift */; };
 		D559EC3D2C801F520058302A /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D559EC3C2C801F520058302A /* ThreadService.swift */; };
 		D559EC402C8026410058302A /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D559EC3F2C8026410058302A /* FeedViewModel.swift */; };
+		D559EC432C8042400058302A /* UserContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D559EC422C8042400058302A /* UserContentViewModel.swift */; };
+		D559EC452C8047E90058302A /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D559EC442C8047E90058302A /* Timestamp.swift */; };
 		D56DF3E32C68A4EC002521E1 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DF3E22C68A4EC002521E1 /* ContentViewModel.swift */; };
 		D56DF3E52C68A967002521E1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DF3E42C68A967002521E1 /* LoginViewModel.swift */; };
 		D56DF3E72C68ADC0002521E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56DF3E62C68ADC0002521E1 /* User.swift */; };
@@ -105,6 +107,8 @@
 		D559EC392C801F320058302A /* CreateThreadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadViewModel.swift; sourceTree = "<group>"; };
 		D559EC3C2C801F520058302A /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
 		D559EC3F2C8026410058302A /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		D559EC422C8042400058302A /* UserContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentViewModel.swift; sourceTree = "<group>"; };
+		D559EC442C8047E90058302A /* Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
 		D56DF3E22C68A4EC002521E1 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		D56DF3E42C68A967002521E1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D56DF3E62C68ADC0002521E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				D56DF3F12C68C26B002521E1 /* PreviewProvider.swift */,
+				D559EC442C8047E90058302A /* Timestamp.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 		D559EC2B2C7F1B450058302A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D559EC412C8042210058302A /* ViewModel */,
 				D559EC2C2C7F1B5E0058302A /* ProfileHeaderView.swift */,
 				D559EC2E2C7F1CEF0058302A /* UserContentListView.swift */,
 			);
@@ -435,6 +441,14 @@
 			isa = PBXGroup;
 			children = (
 				D559EC3F2C8026410058302A /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D559EC412C8042210058302A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D559EC422C8042400058302A /* UserContentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -596,6 +610,7 @@
 				D559EC3D2C801F520058302A /* ThreadService.swift in Sources */,
 				D527BF1D2C46383100E05BE2 /* EditProfileView.swift in Sources */,
 				D558EBFC2C3E6DD800DC62A6 /* TextFieldModifier.swift in Sources */,
+				D559EC432C8042400058302A /* UserContentViewModel.swift in Sources */,
 				D56DF3EA2C68B187002521E1 /* UserService.swift in Sources */,
 				D558EC182C3E878700DC62A6 /* CircleProfileImageView.swift in Sources */,
 				D558EC152C3E767800DC62A6 /* ThreadCell.swift in Sources */,
@@ -606,6 +621,7 @@
 				D558EC1A2C3E883B00DC62A6 /* UserCell.swift in Sources */,
 				D559EC3A2C801F320058302A /* CreateThreadViewModel.swift in Sources */,
 				D56DF3F02C68BF42002521E1 /* ExploreViewModel.swift in Sources */,
+				D559EC452C8047E90058302A /* Timestamp.swift in Sources */,
 				D558EC0F2C3E748A00DC62A6 /* CreateThreadView.swift in Sources */,
 				D559EC2F2C7F1CEF0058302A /* UserContentListView.swift in Sources */,
 				D558EC1D2C3E8C2300DC62A6 /* ProfileThreadFilter.swift in Sources */,

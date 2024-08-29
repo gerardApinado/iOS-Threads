@@ -26,7 +26,7 @@ struct ProfileHeaderView: View {
                 
                 Spacer()
                 
-                CircleProfileImageView()
+                CircleProfileImageView(user: user, size: .medium)
             }
             
             if let bio = user?.bio {

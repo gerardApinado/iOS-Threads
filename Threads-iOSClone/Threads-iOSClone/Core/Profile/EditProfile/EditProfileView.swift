@@ -9,6 +9,7 @@ import SwiftUI
 import PhotosUI
 
 struct EditProfileView: View {
+    let user : User
     
     @State private var bioTF = ""
     @State private var linkTF = ""
@@ -27,12 +28,11 @@ struct EditProfileView: View {
                         VStack(alignment: .leading) {
                             Text("Name")
                                 .fontWeight(.semibold)
-                            Text("Mary Loi Yves Ricalde")
+                            Text(user.fullname)
                         }
                         
                         Spacer()
                         
-//                        CircleProfileImageView()
                         PhotosPicker(selection: $viewModel.selectedItem) {
                             if let image = viewModel.profileImage {
                                 image
@@ -41,7 +41,7 @@ struct EditProfileView: View {
                                     .frame(width: 40, height: 40)
                                     .clipShape(Circle())
                             } else {
-                                CircleProfileImageView()
+                                CircleProfileImageView(user: user, size: .small)
                             }
                         }
                     }
@@ -112,6 +112,6 @@ struct EditProfileView: View {
     }
 }
 
-#Preview {
-    EditProfileView()
-}
+//#Preview {
+//    EditProfileView(user: DeveloperPreview.shared.user)
+//}

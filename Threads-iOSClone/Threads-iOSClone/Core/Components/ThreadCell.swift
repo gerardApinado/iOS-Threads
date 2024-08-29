@@ -11,7 +11,7 @@ struct ThreadCell: View {
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 12) {
-                CircleProfileImageView()
+                CircleProfileImageView(user: DeveloperPreview.shared.user, size: .small)
                 
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {

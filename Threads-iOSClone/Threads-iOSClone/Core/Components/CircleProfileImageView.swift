@@ -7,19 +7,73 @@
 
 import SwiftUI
 
-struct CircleProfileImageView: View {
+enum ProfileImageSize {
+    case xxSmall
+    case xSmall
+    case small
+    case medium
+    case large
+    case xLarge
+    case xxLarge
     
-    var imageName = "placeholder-maloi"
-    
-    var body: some View {
-        Image(imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 40, height: 40)
-            .clipShape(Circle())
+    var dimension: CGFloat {
+        switch self {
+        case .xxSmall:
+            return 28
+        case .xSmall:
+            return 32
+        case .small:
+            return 40
+        case .medium:
+            return 48
+        case .large:
+            return 64
+        case .xLarge:
+            return 80
+        case .xxLarge:
+            return 88
+        }
     }
 }
 
-#Preview {
-    CircleProfileImageView()
+struct CircleProfileImageView: View {
+    var user : User?
+    var size: ProfileImageSize
+    
+    var body: some View {
+        if let imageUrl = user?.profileImageUrl {
+            let url = URL(string: imageUrl)
+            AsyncImage(url: url) { phase in
+                if let image = phase.image {
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: size.dimension, height: size.dimension)
+                        .clipShape(Circle())
+                } else {
+                    ProfileImagePlaceholder(size: size)
+                }
+            }
+            
+            // Add Kignfisher Package for KFImage
+            // has built in caching image support unlike AsyncImage
+        } else {
+            ProfileImagePlaceholder(size: size)
+        }
+    }
+}
+
+//#Preview {
+//    CircleProfileImageView(user: DeveloperPreview.shared.user)
+//}
+
+struct ProfileImagePlaceholder: View {
+    let size : ProfileImageSize
+    
+    var body: some View {
+        Image(systemName: "person.circle.fill")
+            .resizable()
+            .frame(width: size.dimension, height: size.dimension)
+            .foregroundColor(Color(.systemGray4))
+    }
 }

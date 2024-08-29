@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 enum ProfileImageSize {
     case xxSmall
@@ -43,20 +44,26 @@ struct CircleProfileImageView: View {
     var body: some View {
         if let imageUrl = user?.profileImageUrl {
             let url = URL(string: imageUrl)
-            AsyncImage(url: url) { phase in
-                if let image = phase.image {
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: size.dimension, height: size.dimension)
-                        .clipShape(Circle())
-                } else {
-                    ProfileImagePlaceholder(size: size)
-                }
-            }
+            // Uncomment for native SwiftUI implementation
+//            AsyncImage(url: url) { phase in
+//                if let image = phase.image {
+//                    image
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fill)
+//                        .frame(width: size.dimension, height: size.dimension)
+//                        .clipShape(Circle())
+//                } else {
+//                    ProfileImagePlaceholder(size: size)
+//                }
+//            }
             
             // Add Kignfisher Package for KFImage
             // has built in caching image support unlike AsyncImage
+            KFImage(url)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: size.dimension, height: size.dimension)
+                .clipShape(Circle())
         } else {
             ProfileImagePlaceholder(size: size)
         }
